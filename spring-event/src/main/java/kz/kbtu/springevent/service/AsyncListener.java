@@ -1,4 +1,4 @@
-package kz.kbtu.springevent;
+package kz.kbtu.springevent.service;
 
 import org.springframework.context.event.EventListener;
 import org.springframework.scheduling.annotation.Async;

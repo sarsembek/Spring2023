@@ -1,5 +1,6 @@
 package kz.kbtu.simpleappevent.event;
 
+import lombok.Data;
 import lombok.Getter;
 import org.springframework.context.ApplicationEvent;
 

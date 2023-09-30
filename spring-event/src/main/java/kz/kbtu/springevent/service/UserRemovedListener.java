@@ -1,9 +1,13 @@
-package kz.kbtu.springevent;
+package kz.kbtu.springevent.service;
 
+import kz.kbtu.springevent.ReturnedEvent;
+import kz.kbtu.springevent.UserRemovedEvent;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.event.EventListener;
 import org.springframework.transaction.event.TransactionPhase;
 import org.springframework.transaction.event.TransactionalEventListener;
 
+@Slf4j
 public class UserRemovedListener {
 
     @TransactionalEventListener(phase= TransactionPhase.AFTER_COMPLETION)
@@ -14,11 +18,6 @@ public class UserRemovedListener {
 
     @EventListener
     void handleReturnedEvent(ReturnedEvent event) {
-        // handle ReturnedEvent ...
-    }
-
-    @EventListener(condition = "#event.name eq 'reflectoring'")
-    void handleConditionalListener(UserRemovedEvent event) {
-        // handle UserRemovedEvent
+        log.info("User removed");
     }
 }

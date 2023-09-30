@@ -8,6 +8,6 @@ class SpringBuiltInEventsListener
 
     @Override
     public void onApplicationEvent(SpringApplicationEvent event) {
-        // handle event
+
     }
 }
