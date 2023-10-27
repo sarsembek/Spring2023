@@ -23,3 +23,4 @@ public class Employee {
     private String lastName;
 
     private LocalDate dateOfBirth;
+}
